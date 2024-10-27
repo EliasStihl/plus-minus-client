@@ -1,7 +1,7 @@
 import { Player } from "./PlayerModel";
 
 export interface Team{
-    name: String
+    name: string
     players: Player[]
     constant?: number
 }
