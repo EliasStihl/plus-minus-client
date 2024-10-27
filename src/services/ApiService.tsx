@@ -2,7 +2,11 @@
 import axios from "axios";
 import { Player } from "../models/PlayerModel";
 
-const API_URL = "http://localhost:3000";
+
+const API_URL =
+  process.env.NODE_ENV == "production"
+    ? "https://plus-minus-server-905616798865.europe-north1.run.app"
+    : "http://localhost:3000";
 
 export const fetchPlayersByTeam = async (team: string): Promise<Player[]> => {
   try {
